@@ -11,10 +11,12 @@ export const HomeContainer = () => {
   const history = useHistory()
 
   useEffect(() => {
-    boardsService.index(1, 20).then(response => {
-      setBoards(response.data.data)
-    })
-  }, [])
+    if (user.data) {
+      boardsService.index(1, 20).then(response => {
+        setBoards(response.data.data)
+      })
+    }
+  }, [user])
 
   const navigateTo = id => {
     history.push(`/boards/${id}`)
