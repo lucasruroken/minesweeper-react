@@ -1,0 +1,30 @@
+.board-detail .table {
+    width: auto;
+    margin: 0 auto;
+}
+
+.board-detail .table tbody tr td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.board-detail .table tbody tr td i {
+    width: 24px;
+    height: 24px
+}
+
+.board-detail .table tbody tr td i.red {
+    color: red;
+    width: 24px;
+    height: 24px
+}
+
+.board-detail .table tbody tr td:hover {
+    background-color: rgba(0,0,0,.075);
+    cursor: pointer;
+}
+
+.icons-information {
+    margin-top: 60px;
+}
