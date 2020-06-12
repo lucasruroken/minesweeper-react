@@ -1,3 +1,3 @@
 export const constants = {
-  api: 'http://localhost:3001/api/v1'
+  api: 'https://gentle-falls-27352.herokuapp.com/api/v1'
 }
