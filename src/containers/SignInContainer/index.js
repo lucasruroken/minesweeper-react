@@ -26,6 +26,7 @@ export const SignInContainer = () => {
 
   const onSignUp = () => {
     userService.create({...signUpBody}).then(response => {
+      console.log('response => ', response)
       setDataAndRedirect(response)
     }, err => {
       setError(err.response.data.data.message)
@@ -42,6 +43,7 @@ export const SignInContainer = () => {
 
   const setDataAndRedirect = response => {
     const { data: { data: { jwt, attributes } } } = response
+    console.log('jwt => ', jwt);
     localStorage.setItem('jwt', jwt)
     setUser({
       jwt,
